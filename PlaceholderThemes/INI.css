@@ -1,0 +1,14 @@
+/*
+	@theme INI Placeholder
+	@placeholder ini
+*/
+
+@base {
+	color: #333;
+	background-color: #fff;
+}
+
+ini {
+	spell-check: disabled;
+	color: #333;
+}

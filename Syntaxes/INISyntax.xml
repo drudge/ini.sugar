@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<syntax name="sourcecode.ini">
+    <zones>
+        <zone name="metadata.comment.line.number-sign.ini">
+            <expression>\s*(;).*$\n?</expression>
+            <capture number="1" name="punctuation.definition.comment.ini"/>
+        </zone>
+        <zone name="metadata.comment.line.number-sign.ini">
+            <expression>(;).*$\n?</expression>
+            <capture number="1" name="punctuation.definition.comment.ini"/>
+        </zone>
+        <zone name="entity.name.component.ini">
+            <expression>^\s*\[.+\]</expression>
+        </zone>
+        <zone name="pair">
+            <starts-with>
+                <expression>^\s*([^=]+)=\s*</expression>
+                <capture number="1" name="keyword.modifier.scope"/>
+            </starts-with>
+            <ends-with>
+                <expression>$</expression>
+            </ends-with>
+            <subzones>
+                <include collection="string_quoted_double"/>
+                <include collection="string_quoted_single"/>
+                <include collection="normal_value"/>
+            </subzones>
+        </zone>
+    </zones>
+    <library>
+        <collection name="normal_value">
+            <zone name="literal.string">
+                <starts-with>
+                    <expression/>
+                </starts-with>
+                <ends-with>
+                    <expression>$</expression>
+                </ends-with>
+                <subzones>
+                    <zone name="metadata.comment.line.number-sign.ini">
+                        <expression>(#).*</expression>
+                        <capture number="1" name="punctuation.definition.comment.ini"/>
+                    </zone>
+                    <zone name="metadata.comment.line.semi-colon.ini">
+                        <expression>(;).*</expression>
+                        <capture number="1" name="punctuation.definition.comment.ini"/>
+                    </zone>
+                </subzones>
+            </zone>
+        </collection>
+        <collection name="string_quoted_double">
+            <zone name="literal.string">
+                <starts-with>
+                    <expression>(""")</expression>
+                    <capture number="1" name="punctuation.definition.string.begin.ini"/>
+                </starts-with>
+                <ends-with>
+                    <expression>((?&lt;=""")(")""|""")</expression>
+                    <capture number="1" name="punctuation.definition.string.end.ini"/>
+                    <capture number="2" name="meta.empty-string.double.ini"/>
+                </ends-with>
+            </zone>
+        </collection>
+        <collection name="string_quoted_single">
+            <zone name="literal.string">
+                <starts-with>
+                    <expression>(''')</expression>
+                    <capture number="1" name="punctuation.definition.string.begin.ini"/>
+                </starts-with>
+                <ends-with>
+                    <expression>((?&lt;=''')(')''|''')</expression>
+                    <capture number="1" name="punctuation.definition.string.end.ini"/>
+                    <capture number="2" name="meta.empty-string.single.ini"/>
+                </ends-with>
+            </zone>
+        </collection>
+    </library>
+</syntax>

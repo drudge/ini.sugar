@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings>
+
+    <language id="com.conceitedsoftware.Sugar.INI">
+
+        <name>INI</name>
+
+        <root-zone>sourcecode.ini</root-zone>
+
+        <detectors>
+            <extension>ini</extension>
+        </detectors>
+
+    </language>
+
+    <meta>
+        <name>INI</name>
+        <description>A Sugar adding INI support for Espresso</description>
+        <author>Nicholas Penree</author>
+        <identifier>com.conceitedsoftware.Sugar.INI</identifier>
+        <url>http://github.com/drudge/ini.sugar</url>
+        <version status="preview">1.0b1</version>
+        <download format="git">git://github.com/drudge/ini.sugar.git</download>
+    </meta>
+
+</settings>
