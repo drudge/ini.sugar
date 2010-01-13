@@ -13,7 +13,7 @@ doing so can be found on their respective homes.
 
 1. Clone this project somewhere, with the following:
     
-    git clone git://github.com/-drudge/ini.sugar.git ./INI.sugar
+    git clone git://github.com/drudge/ini.sugar.git ./INI.sugar
     
 2. Link it to your syntaxes directory:
     
