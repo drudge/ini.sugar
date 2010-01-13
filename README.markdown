@@ -18,7 +18,7 @@ doing so can be found on their respective homes.
 2. Link it to your syntaxes directory:
     
     mkdir -p "~/Library/Application Support/Espresso/Sugars/"
-    ln -s "$(pwd)/Diff.sugar" "/Users/$(whoami)/Library/Application Support/Espresso/Sugars/"
+    ln -s "$(pwd)/INI.sugar" "/Users/$(whoami)/Library/Application Support/Espresso/Sugars/"
     
     
 3. Close Espresso and reload, the sugar should be installed and functional.
