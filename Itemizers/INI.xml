@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <recipe name="key">
+        <class>ESBaseItem</class>
+        <selector>keyword.modifier.scope:capture(name)</selector>
+    </recipe>
+    
+    <recipe name="comment.hidden">
+        <class>ESBaseItem</class>
+        <selector>metadata.comment</selector>
+    </recipe>
+    
+</itemizer>
